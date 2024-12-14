@@ -317,10 +317,15 @@ return [
             'icon' => 'fas fa-fw fa-user',
         ],
         [
-            'text' => 'change_password',
-            'url' => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'text' => 'Clientes',
+            'url' => 'clients',
+            'icon' => 'fas fa-fw fa-users',
         ],
+        [
+            'text' => 'Planes',
+            'url'  => 'plans',
+            'icon' => 'fas fa-fw fa-box',
+        ]
     ],
 
     /*

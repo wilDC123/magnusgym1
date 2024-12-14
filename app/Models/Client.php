@@ -17,7 +17,11 @@ class Client extends Model
         'gender'
     ];
 
-    public function reservations(){
-        return $this->hasMany(Reservation::class);
+    public function memberships(){
+        return $this->hasMany(Membership::class);
+    }
+
+    public function reports(){
+        return $this->hasMany(Report::class);
     }
 }
