@@ -317,6 +317,16 @@ return [
             'icon' => 'fas fa-fw fa-user',
         ],
         [
+            'text' => 'Horarios',
+            'url' => 'workshifts',
+            'icon' => 'fas fa-fw fa-users',
+        ],
+        [
+            'text' => 'Entrenadores',
+            'url' => 'trainers',
+            'icon' => 'fas fa-fw fa-users',
+        ],
+        [
             'text' => 'Clientes',
             'url' => 'clients',
             'icon' => 'fas fa-fw fa-users',
