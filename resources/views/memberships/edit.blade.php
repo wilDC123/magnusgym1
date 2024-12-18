@@ -1,14 +1,16 @@
 @extends('adminlte::page')
 
-@section('title', 'Agregar Membresía')
+@section('title', 'Editar Membresía')
 
 @section('content_header')
-    <h1>Agregar datos de la Membresía</h1>
+    <h1>Editar datos de la Membresía</h1>
 @stop
 
 @section('content')
-    <form action="{{ route('memberships.store') }}" method="POST">
+    <form action="{{ route('memberships.update', $membership->id) }}" method="POST">
         @csrf
+        @method('PUT')
+        
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
@@ -16,7 +18,9 @@
                     <select id="id_client" name="id_client" class="form-control" required>
                         <option value="">Seleccionar Cliente</option>
                         @foreach($clients as $client)
-                            <option value="{{ $client->id }}">{{ $client->client_name }}</option>
+                            <option value="{{ $client->id }}" {{ $membership->id_client == $client->id ? 'selected' : '' }}>
+                                {{ $client->first_name }} {{ $client->last_name }}
+                            </option>
                         @endforeach
                     </select>
                 </div>
@@ -27,7 +31,9 @@
                     <select id="id_plan" name="id_plan" class="form-control" required>
                         <option value="">Seleccionar Plan</option>
                         @foreach($plans as $plan)
-                            <option value="{{ $plan->id }}">{{ $plan->plan_name }}</option>
+                            <option value="{{ $plan->id }}" {{ $membership->id_plan == $plan->id ? 'selected' : '' }}>
+                                {{ $plan->plan_name }}
+                            </option>
                         @endforeach
                     </select>
                 </div>
@@ -35,6 +41,6 @@
         </div>
 
         <a href="{{ route('memberships.index') }}" class="btn btn-secondary">Volver</a>
-        <button type="submit" class="btn btn-primary">Guardar</button>
+        <button type="submit" class="btn btn-primary">Actualizar</button>
     </form>
 @stop
