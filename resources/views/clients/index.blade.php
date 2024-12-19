@@ -5,17 +5,20 @@
 @stop
 @section('content')
     <div class="d-flex justify-content-between align-items-center mb-3">
-        <a href="{{route('clients.create')}}" class="btn btn-primary">Agregar Cliente</a>
+        <a href="{{route('clients.create')}}" class="btn btn-success">Agregar Cliente</a>
     </div>
     <table  id="clients" class="table table-bordered mt-12">
-        <thead>
-            <th width="30px">ID</th>
-            <th>Nombre completo</th>
-            <th>Cédula</th>
-            <th>Género</th>
-            <th>Teléfono</th>
-            <th>Email</th>
-            <th>Acciones</th>
+        <thead style="background-color: #343A40;">
+            <tr style="color:#83FF6D">
+                <th width="30px">ID</th>
+                <th>Nombre completo</th>
+                <th>Cédula <span style="color: red;">*</span></th>
+                <th>Género</th>
+                <th>Teléfono <span style="color: red;">*</span></th>
+                <th>Email <span style="color: red;">*</span></th>
+                <th>Acciones</th>
+            </tr>
+            
         </thead>
         <tbody>
             @foreach ($clients as $client)

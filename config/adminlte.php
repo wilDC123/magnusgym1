@@ -63,8 +63,8 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+    'logo' => '<b>Magnus</b>GYM',
+    'logo_img' => 'img/logo/magnuslogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -314,41 +314,50 @@ return [
         [
             'text' => 'Administrador',
             'url' => 'users',
+            'icon_color' => 'green',
             'icon' => 'fas fa-fw fa-user-cog',
+            'classes' => 'custom-active',
         ],
         [
             'text' => 'Horarios',
             'url' => 'workshifts',
+            'icon_color' => 'green',
             'icon' => 'fas fa-fw fa-calendar-alt',
         ],
         [
             'text' => 'Entrenadores',
             'url' => 'trainers',
+            'icon_color' => 'green',
             'icon' => 'fas fa-fw fa-dumbbell',
         ],
         [
             'text' => 'Clientes',
             'url' => 'clients',
+            'icon_color' => 'green',
             'icon' => 'fas fa-fw fa-users',
         ],
         [
             'text' => 'Planes',
             'url'  => 'plans',
+            'icon_color' => 'green',
             'icon' => 'fas fa-fw fa-layer-group',
         ],
         [
             'text' => 'Membresias',
             'url' => 'memberships',
             'icon' => 'fas fa-fw fa-id-card',
-        ],
+            'icon_color' => 'green',
+            'style' => 'color: #FF5733;'        ],
         [
             'text' => 'Pagos',
             'url' => 'payments',
+            'icon_color' => 'green',
             'icon' => 'fas fa-fw fa-credit-card',
         ],
         [
             'text' => 'Reportes',
             'url' => 'reports',
+            'icon_color' => 'green',
             'icon' => 'fas fa-fw fa-chart-bar',
         ]
         
@@ -390,7 +399,7 @@ return [
 
     'plugins' => [
         'Datatables' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
@@ -435,7 +444,7 @@ return [
             ],
         ],
         'Sweetalert2' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
@@ -460,6 +469,7 @@ return [
             ],
         ],
     ],
+    
 
     /*
     |--------------------------------------------------------------------------

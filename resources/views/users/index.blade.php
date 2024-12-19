@@ -8,8 +8,8 @@
 
 @section('content')
     <table id="users" class="table table-bordered">
-        <thead >
-            <tr>
+        <thead style="background-color: #343A40;">
+            <tr style="color:#83FF6D">
                 <th>ID</th>
                 <th>Nombre</th>
                 <th>Email</th>

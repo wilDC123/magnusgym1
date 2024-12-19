@@ -8,16 +8,16 @@
 
 @section('content')
     <div class="d-flex justify-content-between align-items-center mb-3">
-        <a href="{{ route('payments.create') }}" class="btn btn-primary">Registrar Pago</a>
+        <a href="{{ route('payments.create') }}" class="btn btn-success">Registrar Pago</a>
     </div>
 
     <table id="payments" class="table table-bordered mt-3">
-        <thead>
-            <tr>
+        <thead style="background-color: #343A40;">
+            <tr style="color:#83FF6D">
                 <th>ID</th>
                 <th>Cliente</th>
-                <th>Plan</th>
-                <th>Monto</th>
+                <th>Plan <span style="color: red;">*</span></th>
+                <th>Monto <span style="color: red;">*</span></th>
                 <th>Fecha de Pago</th>
                 <th>Acciones</th>
             </tr>
