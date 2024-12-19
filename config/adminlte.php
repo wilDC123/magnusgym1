@@ -312,19 +312,19 @@ return [
 
         // Sidebar items:
         [
-            'text' => 'profile',
-            'url' => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
+            'text' => 'Administrador',
+            'url' => 'users',
+            'icon' => 'fas fa-fw fa-user-cog',
         ],
         [
             'text' => 'Horarios',
             'url' => 'workshifts',
-            'icon' => 'fas fa-fw fa-users',
+            'icon' => 'fas fa-fw fa-calendar-alt',
         ],
         [
             'text' => 'Entrenadores',
             'url' => 'trainers',
-            'icon' => 'fas fa-fw fa-users',
+            'icon' => 'fas fa-fw fa-dumbbell',
         ],
         [
             'text' => 'Clientes',
@@ -334,8 +334,24 @@ return [
         [
             'text' => 'Planes',
             'url'  => 'plans',
-            'icon' => 'fas fa-fw fa-box',
+            'icon' => 'fas fa-fw fa-layer-group',
+        ],
+        [
+            'text' => 'Membresias',
+            'url' => 'memberships',
+            'icon' => 'fas fa-fw fa-id-card',
+        ],
+        [
+            'text' => 'Pagos',
+            'url' => 'payments',
+            'icon' => 'fas fa-fw fa-credit-card',
+        ],
+        [
+            'text' => 'Reportes',
+            'url' => 'reports',
+            'icon' => 'fas fa-fw fa-chart-bar',
         ]
+        
     ],
 
     /*

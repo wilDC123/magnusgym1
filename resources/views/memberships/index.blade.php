@@ -1,39 +1,35 @@
 @extends('adminlte::page')
 
-@section('title', 'Entrenadores')
+@section('title', 'Membresías')
 
 @section('content_header')
-    <h1>Listado de Entrenadores</h1>
+    <h1>Listado de Membresías</h1>
 @stop
 
 @section('content')
     <div class="d-flex justify-content-between align-items-center mb-3">
-        <a href="{{ route('trainers.create') }}" class="btn btn-primary">Agregar Entrenador</a>
+        <a href="{{ route('memberships.create') }}" class="btn btn-primary">Agregar Membresía</a>
     </div>
 
-    <table id="trainers" class="table table-bordered mt-3">
+    <table id="memberships" class="table table-bordered mt-3">
         <thead>
             <tr>
                 <th width="30px">ID</th>
-                <th>Nombre del Entrenador</th>
-                <th>Teléfono</th>
-                <th>Correo Electrónico</th>
-                <th>Horario de Trabajo</th>
+                <th>Cliente</th>
+                <th>Plan</th>
                 <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
-            @foreach ($trainers as $trainer)
+            @foreach ($memberships as $membership)
                 <tr>
-                    <td>{{ $trainer->id }}</td>
-                    <td>{{ $trainer->trainer_name }}</td>
-                    <td>{{ $trainer->phone }}</td>
-                    <td>{{ $trainer->email }}</td>
-                    <td>{{ $trainer->workshift->workshift_name }}</td> <!-- Mostramos el nombre del horario relacionado -->
+                    <td>{{ $membership->id }}</td>
+                    <td>{{ $membership->client->first_name }} {{ $membership->client->last_name }}</td>
+                    <td>{{ $membership->plan->plan_name }}</td>
                     <td>
-                        <a href="{{ route('trainers.edit', $trainer->id) }}" class="btn btn-dark btn-sm"><i class="fas fa-edit"></i></a>
-                        <a href="{{ route('trainers.show', $trainer->id) }}" class="btn btn-info btn-sm"><i class="fas fa-eye"></i></a>
-                        <form action="{{ route('trainers.destroy', $trainer->id) }}" method="POST" style="display: inline" onsubmit="return confirm('¿Estás seguro de que deseas eliminar este entrenador?')">
+                        <a href="{{ route('memberships.edit', $membership->id) }}" class="btn btn-dark btn-sm"><i class="fas fa-edit"></i></a>
+                        <a href="{{ route('memberships.show', $membership->id) }}" class="btn btn-info btn-sm"><i class="fas fa-eye"></i></a>
+                        <form action="{{ route('memberships.destroy', $membership->id) }}" method="POST" style="display: inline" onsubmit="return confirm('¿Estás seguro de que deseas eliminar esta membresía?')">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger btn-sm">
@@ -52,7 +48,7 @@
     <script src="https://cdn.datatables.net/2.1.4/js/dataTables.bootstrap5.js"></script>
     <script>
         $(document).ready(function(){
-                    $('#trainers').DataTable({
+                    $('#memberships').DataTable({
                         "ordering":false,
                         "language":{
                             "search":       "Buscar",
