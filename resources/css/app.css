@@ -1,0 +1,8 @@
+.nav-item > .nav-link.active {
+    background-color: #ff5722; 
+    color: #fff; 
+}
+.custom-active {
+    background-color: #4caf50; 
+    color: white; 
+}

@@ -1,7 +1,7 @@
 @extends('adminlte::page')
 @section('title', 'Agregar Clientes')
 @section('content_header')
-    <h1>Agregar datos de un Clientes</h1>
+    <h1>Agregar datos de un Cliente</h1>
 @stop
 @section('content')
     <form action="{{route('clients.store')}}" method="POST">

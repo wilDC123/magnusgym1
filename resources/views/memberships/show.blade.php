@@ -7,17 +7,22 @@
 @stop
 
 @section('content')
-    <div>
+    <div class="card">
         <div class="card-header">
-            <h3 class="card-title font-weight-bold">{{ $membership->client->client_name }}</h3>
+            <h3 class="card-title font-weight-bold">Detalle de {{ $membership->client->first_name }} {{ $membership->client->last_name }}</h3>
         </div>
         <div class="card-body">
-            <p><strong>Cliente: </strong>{{ $membership->client->client_name }}</p>
+            <p><strong>Cliente: </strong>{{ $membership->client->first_name }} {{ $membership->client->last_name }}</p>
             <p><strong>Plan: </strong>{{ $membership->plan->plan_name }}</p>
+            <p><strong>Fecha de Inicio: </strong>{{ $membership->fecha_inicio }}</p>
+            <p><strong>Fecha de Fin: </strong>{{ $membership->fecha_fin }}</p>
+            <p><strong>Días Restantes: </strong>{{ $membership->dias_restantes }}</p>
         </div>
-        <div class="card-footer">
-            <a href="{{ route('memberships.index') }}" class="btn btn-secondary">Volver</a>
-            <a href="{{ route('memberships.edit', $membership->id) }}" class="btn btn-primary">Modificar</a>
+        <div class="card-footer d-flex justify-content-between">
+            <div>
+                <a href="{{ route('memberships.index') }}" class="btn btn-secondary">Volver</a>
+                <a href="{{ route('memberships.edit', $membership->id) }}" class="btn btn-primary">Modificar</a>
+            </div>
             <form action="{{ route('memberships.destroy', $membership->id) }}" method="POST" style="display: inline;">
                 @csrf
                 @method('DELETE')

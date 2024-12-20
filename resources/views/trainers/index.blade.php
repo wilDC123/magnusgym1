@@ -8,16 +8,16 @@
 
 @section('content')
     <div class="d-flex justify-content-between align-items-center mb-3">
-        <a href="{{ route('trainers.create') }}" class="btn btn-primary">Agregar Entrenador</a>
+        <a href="{{ route('trainers.create') }}" class="btn btn-success">Agregar Entrenador</a>
     </div>
 
     <table id="trainers" class="table table-bordered mt-3">
-        <thead>
-            <tr>
+        <thead style="background-color: #343A40;">
+            <tr style="color:#83FF6D">
                 <th width="30px">ID</th>
                 <th>Nombre del Entrenador</th>
-                <th>Teléfono</th>
-                <th>Correo Electrónico</th>
+                <th>Teléfono <span style="color: red;">*</span></th>
+                <th>Correo Electrónico<span style="color: red;">*</span></th>
                 <th>Horario de Trabajo</th>
                 <th>Acciones</th>
             </tr>

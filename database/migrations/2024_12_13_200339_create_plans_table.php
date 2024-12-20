@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('plan_name');
             $table->string('description');
+            $table->integer('duracion_dias');
             $table->decimal('price', 6, 2);
             $table->timestamps();
         });

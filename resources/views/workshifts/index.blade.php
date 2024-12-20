@@ -5,15 +5,18 @@
 @stop
 @section('content')
     <div class="d-flex justify-content-between align-items-center mb-3">
-        <a href="{{ route('workshifts.create') }}" class="btn btn-primary">Agregar Horario</a>
+        <a href="{{ route('workshifts.create') }}" class="btn btn-success">Agregar Horario</a>
     </div>
     <table id="workshifts" class="table table-bordered mt-12">
-        <thead>
-            <th width="30px">ID</th>
-            <th>Nombre del Horario</th>
-            <th>Hora de Inicio</th>
-            <th>Hora de Fin</th>
-            <th>Acciones</th>
+        <thead style="background-color: #343A40;">
+            <tr style="color:#83FF6D">
+                <th width="30px">ID</th>
+                <th>Nombre del Horario</th>
+                <th>Hora de Inicio</th>
+                <th>Hora de Fin</th>
+                <th>Acciones</th>
+            </tr>
+            
         </thead>
         <tbody>
             @foreach ($workshifts as $workshift)
