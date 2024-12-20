@@ -18,7 +18,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                background-color: #0f172a;
+                background-color: #252223;
                 font-family: Arial, sans-serif;
                 color: white; /* Texto blanco para mejor contraste */
             }
@@ -29,16 +29,12 @@
                 align-items: center;
             }
             .logo-container {
-                width: 200px;
-                height: 300px;
-                background: #0d9488;
+                width: 300px;
+                height: auto;
             }
             .logo-gym {
                 width: 100%;
                 height: 100%;
-            }
-            .buttons {
-                margin-top: 20px;
             }
             .button {
                 display: inline-block;
@@ -54,10 +50,10 @@
                 cursor: pointer;
             }
             .bt-primary {
-                background-color: #0d9488;
+                background-color: #76BD4C;
             }
             .bt-primary:hover {
-                background-color: #115e59;
+                background-color:rgb(66, 128, 30);
             }
             .bt-secondary {
                 background-color: #64748b;
@@ -71,9 +67,9 @@
         <div>
 
             <div class="container">
-                <div class="logo-container">
-                    <p class="logo-gym">logo de Gym</span>
-                </div>
+                <figure class="logo-container">
+                    <img class="logo-gym" src="{{ asset('img/logo/magnuslogo.png') }}" alt="logo de Magnus Gym">
+                </figure>
 
                 <div>
                     @if (Route::has('login'))
