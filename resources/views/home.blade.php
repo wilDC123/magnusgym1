@@ -2,17 +2,24 @@
 
 @section('title', 'Dashboard')
 
-@section('content_header')
-    <h1>Dashboard</h1>
-@stop
-
 @section('content')
-    <p>Welcome to this beautiful admin panel.</p>
+    <div class="content-background">
+        <h1 style="color:#83FF6D; font-size: 4rem; text-align: center;">Magnus GYM</h1>
+        <h2 style="color:#83FF6D; font-size: 1.5rem; text-align: center;">Hola, {{ Auth::user()->name }}. ¡Bienvenido al panel de administración!</h2>
+    </div>
 @stop
 
 @section('css')
-    {{-- Add here extra stylesheets --}}
-    {{-- <link rel="stylesheet" href="/css/admin_custom.css"> --}}
+    <style>
+        .content-background {
+            background-image: url('/img/fondo/image.png'); 
+            background-size: cover; 
+            background-position: center; 
+            padding: 360px; 
+            color: white; 
+            border-radius: 8px; 
+        }
+    </style>
 @stop
 
 @section('js')
