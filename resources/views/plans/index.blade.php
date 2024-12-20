@@ -19,6 +19,7 @@
                     <th width="30px">ID</th>
                     <th>Nombre del Plan</th>
                     <th>Descripción</th>
+                    <th>Duración</th>
                     <th>Precio <span style="color: red;">*</span></th>
                     <th>Acciones</th>
                 </tr>
@@ -29,6 +30,7 @@
                         <td>{{ $plan->id }}</td>
                         <td>{{ $plan->plan_name }}</td>
                         <td>{{ $plan->description }}</td>
+                        <td>{{ $plan->duracion_dias }} días</td>
                         <td>{{ $plan->price }}</td>
                         <td>
                             <a href="{{ route('plans.edit', $plan) }}" class="btn btn-dark btn-sm" aria-label="Editar plan">

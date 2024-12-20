@@ -35,8 +35,11 @@ class Membership extends Model
             $plan = Plan::find($membership->id_plan);
 
             if ($plan) {
-                $membership->fecha_inicio = now()->toDateString();
-                $membership->fecha_fin = now()->addDays($plan->duracion_dias)->toDateString();
+                // Usa la fecha proporcionada o establece la actual si no se proporciona
+                $membership->fecha_inicio = $membership->fecha_inicio ?? now()->toDateString();
+                $membership->fecha_fin = \Carbon\Carbon::parse($membership->fecha_inicio)
+                    ->addDays($plan->duracion_dias)
+                    ->toDateString();
                 $membership->dias_restantes = $plan->duracion_dias;
             }
         });

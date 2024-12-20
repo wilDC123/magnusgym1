@@ -66,21 +66,20 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="fecha_fin">Fecha de Fin:</label>
-                    <input type="date" id="fecha_fin" name="fecha_fin" class="form-control" 
-                           value="{{ old('fecha_fin', $membership->fecha_fin) }}">
+                    <input type="date" id="fecha_fin" name="fecha_fin" class="form-control"  value="{{ old('fecha_fin', $membership->fecha_fin) }}" readonly>
                 </div>
             </div>
         </div>
 
         <div class="row mt-3">
-            <!-- Días restantes -->
+            <!-- Días restantes 
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="dias_restantes">Días Restantes:</label>
                     <input type="number" id="dias_restantes" name="dias_restantes" class="form-control" 
                            value="{{ old('dias_restantes', $membership->dias_restantes) }}" min="0">
                 </div>
-            </div>
+            </div> -->
         </div>
 
         <!-- Botones de acción -->

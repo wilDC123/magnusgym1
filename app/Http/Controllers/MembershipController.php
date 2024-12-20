@@ -27,15 +27,14 @@ class MembershipController extends Controller
     // Guardar una nueva membresía
     public function store(Request $request)
     {
-        $request->validate([
+       $validated = $request->validate([
             'id_client' => 'required|exists:clients,id',
             'id_plan' => 'required|exists:plans,id',
+            'fecha_inicio' => 'nullable|date', // Permitir fecha opcional
         ]);
 
-        Membership::create([
-            'id_client' => $request->id_client,
-            'id_plan' => $request->id_plan,
-        ]);
+        // Crear la membresía con los datos validados
+        Membership::create($validated);
 
         return redirect()->route('memberships.index')->with('success', 'La membresía fue creada correctamente.');
     }
